@@ -56,6 +56,6 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F033046D9C7B45FC87A971B52F0FC6B7 }}
           package: .
 
-      - name: Build
+      - name: Run tests
         run: 
           dotnet test

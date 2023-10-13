@@ -34,6 +34,10 @@ jobs:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
 
+      - name: Run tests
+        run:  
+          dotnet test
+
   deploy:
     runs-on: windows-latest
     needs: build
@@ -55,7 +59,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F033046D9C7B45FC87A971B52F0FC6B7 }}
           package: .
-
-      - name: Run tests
-        run:  
-          dotnet test Rekenmachine.sln

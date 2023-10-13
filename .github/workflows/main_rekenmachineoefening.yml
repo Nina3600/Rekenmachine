@@ -57,5 +57,5 @@ jobs:
           package: .
 
       - name: Run tests
-        run: 
-          dotnet test
+        run:  
+          dotnet test Rekenmachine.sln
